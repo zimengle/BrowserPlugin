@@ -85,7 +85,7 @@ ANPNativeWindowInterfaceV0  gNativeWindowI;
 
 NPError NP_Initialize(NPNetscapeFuncs* browserFuncs, NPPluginFuncs* pluginFuncs, void *java_env)
 {
-	__android_log_print(ANDROID_LOG_INFO,"zzm","dsadasdadsadsadsasddsa");
+	__android_log_print(ANDROID_LOG_INFO,"zzm","hehehe222333");
     // Make sure we have a function table equal or larger than we are built against.
     if (browserFuncs->size < sizeof(NPNetscapeFuncs)) {
         return NPERR_GENERIC_ERROR;
@@ -155,10 +155,14 @@ const char *NP_GetMIMEDescription(void)
     return "application/x-testbrowserplugin:tst:Test plugin mimetype is application/x-testbrowserplugin";
 }
 
+
 NPError NPP_New(NPMIMEType pluginType, NPP instance, uint16_t mode, int16_t argc,
                 char* argn[], char* argv[], NPSavedData* saved)
 {
 
+	NPBool supportsWindowless = FALSE;
+
+	 //	NPP_SetValue(instance, NPNVSupportsWindowless, (void*)false);
     /* BEGIN: STANDARD PLUGIN FRAMEWORK */
     PluginObject *obj = NULL;
 

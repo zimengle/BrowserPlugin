@@ -9,9 +9,9 @@ public class BackgroundSurface extends TextView {
     public BackgroundSurface(Context context) {
         super(context);
 
-        this.setBackgroundColor(Color.BLACK);
+        this.setBackgroundColor(Color.BLUE);
         this.setTextColor(Color.WHITE);
-        this.setText("This is a 嘻嘻");
+        this.setText("This is a 哈哈");
 
         // ensure that the view system is aware that we will be drawing
         this.setWillNotDraw(false);

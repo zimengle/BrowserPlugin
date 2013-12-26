@@ -25,7 +25,7 @@
 					<folderInfo id="com.android.toolchain.gcc.617355854.674335742" name="/" resourcePath="">
 						<toolChain id="com.android.toolchain.gcc.587790725" name="com.android.toolchain.gcc" superClass="com.android.toolchain.gcc">
 							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.android.targetPlatform.1211023776" isAbstract="false" superClass="com.android.targetPlatform"/>
-							<builder arguments="APP_ABI=x86" command="ndk-build" id="com.android.builder.1944433505" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Android Builder" superClass="com.android.builder"/>
+							<builder arguments="APP_OPTIM=debug" command="ndk-build" id="com.android.builder.1944433505" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Android Builder" superClass="com.android.builder"/>
 							<tool id="com.android.gcc.compiler.1110819093" name="Android GCC Compiler" superClass="com.android.gcc.compiler">
 								<option id="com.android.gcc.option.includePath.468401711" superClass="com.android.gcc.option.includePath"/>
 								<inputType id="com.android.gcc.inputType.1250237834" superClass="com.android.gcc.inputType"/>

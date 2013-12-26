@@ -24,12 +24,15 @@
  */
 package com.android.sampleplugin;
 
+import java.io.IOException;
+
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
 public class SamplePlugin extends Service {
 
+	
 //	static {
 //        System.loadLibrary("libsampleplugin");
 //    }

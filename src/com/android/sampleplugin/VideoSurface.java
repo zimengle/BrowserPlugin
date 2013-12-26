@@ -24,43 +24,33 @@
  */
 package com.android.sampleplugin;
 
-import com.android.sampleplugin.graphics.CubeRenderer;
+
+import java.util.ArrayList;
+
+import com.android.sampleplugin.component.Slider;
 
 import android.content.Context;
-import android.opengl.GLSurfaceView;
-import android.view.WindowManager;
+import android.graphics.Color;
 import android.widget.FrameLayout;
-import android.widget.MediaController;
-import android.widget.VideoView;
+import android.widget.TextView;
 
 public class VideoSurface extends FrameLayout {
 
+	
+	
     public VideoSurface(Context context) {
         super(context);
 
-        LayoutParams fp = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+        LayoutParams fp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         this.setLayoutParams(fp);
-
-//        VideoView video = new VideoView(context);
-//        LayoutParams vp = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
-//        vp.setLayoutParams(vp);
-
-        GLSurfaceView gl = new GLSurfaceView(context);
-        LayoutParams gp = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
-        gl.setLayoutParams(gp);
-
-        this.addView(gl);
-//        this.addView(video);
-
-        // Tell the cube renderer that we want to render a translucent version
-        // of the cube:
-        gl.setRenderer(new CubeRenderer(false));
-//        gl.setWindowType(WindowManager.LayoutParams.TYPE_APPLICATION_MEDIA_OVERLAY);
-
-//        video.setVideoPath("/sdcard/test_video.3gp");
-//        video.setMediaController(new MediaController(context));
-//        video.requestFocus();
-
+        Slider slider = new Slider(context);
+        slider.setData(new ArrayList<String>(){{
+        	add("http://gmu.baidu.com/examples/assets/slider/image1.png");
+        	add("http://gmu.baidu.com/examples/assets/slider/image2.png");
+        	add("http://gmu.baidu.com/examples/assets/slider/image3.png");
+        	add("http://gmu.baidu.com/examples/assets/slider/image4.png");
+        }});
+        this.addView(slider, new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
         // ensure that the view system is aware that we will be drawing
         this.setWillNotDraw(false);
     }

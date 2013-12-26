@@ -66,9 +66,9 @@ LOCAL_C_INCLUDES += \
 	$(PLATFORM_PATH)/system/core/include \
 	$(PLATFORM_PATH)/libnativehelper/include/nativehelper
 
-#LIB_PATH := $(LOCAL_PATH)/lib/so/arm
+LIB_PATH := $(LOCAL_PATH)/lib/so/arm
 
-LIB_PATH := $(LOCAL_PATH)/lib/so/x86
+#LIB_PATH := $(LOCAL_PATH)/lib/so/x86
 
 #LOCAL_SHARED_LIBRARIES := \
 
